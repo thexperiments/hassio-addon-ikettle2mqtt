@@ -100,7 +100,7 @@ myKettle.connect().then(function(){
       "payload_on": "true"
     }
     console.log("Publishing homeassistant auto discovery " + JSON.stringify(baseSensorConfig));
-    client.publish(dicoveryPrefix + "/binary_sensor/iKettle_" + uniqueKettleID + "_base/config",JSON.stringify(baseSensorConfig, messageOptions));
+    client.publish(dicoveryPrefix + "/binary_sensor/iKettle_" + uniqueKettleID + "_base/config",JSON.stringify(baseSensorConfig), messageOptions);
   }
 });
 
