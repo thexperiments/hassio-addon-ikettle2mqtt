@@ -1,0 +1,27 @@
+{
+  "name": "iKettle2mqtt",
+  "version": "0.0.1",
+  "slug": "iKettle",
+  "description": "A bridge to use the smarter iKettle via MQTT",
+  "startup": "application",
+  "arch": [
+    "amd64",
+    "armhf",
+    "i386",
+    "armv7",
+    "aarch64"
+  ],
+  "boot": "auto",
+  "host_network": true,
+  "options": {
+    "kettleIP": "your_ip_here",
+    "kettleName": "Electric Kettle",
+    "kettleUniqueID": "electric_kettle_mqtt",
+    "mqttHost": "localhost",
+    "mqttUser": "",
+    "mqttPassword": "",
+    "discoveryPrefix": "homeassistant",
+    "discoveryEnabled": true,
+    "additionalTemperatures": [70,80,90,100]
+  }
+}
