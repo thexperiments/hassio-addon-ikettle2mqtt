@@ -1,7 +1,7 @@
 {
   "name": "ikettle2mqtt",
   "version": "0.0.1",
-  "slug": "iKettle",
+  "slug": "ikettle2mqtt",
   "description": "A bridge to use the smarter iKettle via MQTT",
   "startup": "application",
   "arch": [
