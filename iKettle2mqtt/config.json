@@ -1,5 +1,5 @@
 {
-  "name": "iKettle2mqtt",
+  "name": "ikettle2mqtt",
   "version": "0.0.1",
   "slug": "iKettle",
   "description": "A bridge to use the smarter iKettle via MQTT",
