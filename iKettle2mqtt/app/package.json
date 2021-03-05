@@ -1,6 +1,6 @@
 {
   "name": "hassio-ikettle2mqtt",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A mqtt bridge to control iKettle 2.0 with Homeassitant via MQTT",
   "main": "app.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "mqtt": "^4.2.6",
-    "smarter-devices-promise": "0.0.2"
+    "smarter-devices-promise": "0.0.4"
   }
 }
