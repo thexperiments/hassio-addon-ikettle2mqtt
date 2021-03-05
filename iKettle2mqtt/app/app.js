@@ -117,7 +117,7 @@ myKettle.on("statusMessage",function(status){
 })
 
 client.on("connect",function(){	
-  console.log("connected");
+  console.log("Mqtt connected");
 });
 
 //handle incoming messages
