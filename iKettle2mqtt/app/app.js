@@ -107,7 +107,7 @@ myKettle.connect().then(function(){
       "unique_id": uniqueKettleID + "_waterlevelLiters",
       "state_topic": `iKettle/${uniqueKettleID}/waterlevelLiters`,
       "unit_of_measurement": "L",
-      "device_class":"waterlevelLiters"
+      "device_class":"moisture"
     }
     console.log("Publishing homeassistant auto discovery " + JSON.stringify(levelSensorConfig));
     client.publish(dicoveryPrefix + "/binary_sensor/iKettle_" + uniqueKettleID + "_waterlevelLiters/config",JSON.stringify(levelSensorConfig), messageOptions);
