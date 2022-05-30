@@ -2,7 +2,7 @@
   "name": "ikettle2mqtt",
   "version": "0.0.3",
   "slug": "ikettle2mqtt",
-  "description": "A bridge to use the smarter iKettle via MQTT",
+  "description": "A bridge to use the smarter iKettle2 via MQTT",
   "startup": "application",
   "arch": [
     "amd64",
