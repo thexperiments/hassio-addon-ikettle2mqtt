@@ -101,6 +101,17 @@ myKettle.connect().then(function(){
     }
     console.log("Publishing homeassistant auto discovery " + JSON.stringify(baseSensorConfig));
     client.publish(dicoveryPrefix + "/binary_sensor/iKettle_" + uniqueKettleID + "_base/config",JSON.stringify(baseSensorConfig), messageOptions);
+	  
+     var levelSensorConfig = {
+      "name": kettleName + " waterlevelLiters",
+      "unique_id": uniqueKettleID + "_waterlevelLiters",
+      "state_topic": `iKettle/${uniqueKettleID}/waterlevelLiters`,
+      "unit_of_measurement": "L",
+      "device_class":"water"
+    }
+     
+    console.log("Publishing homeassistant auto discovery " + JSON.stringify(levelSensorConfig));
+    client.publish(dicoveryPrefix + "/sensor/iKettle_" + uniqueKettleID + "/config",JSON.stringify(levelSensorConfig), messageOptions);
   }
 });
 
@@ -113,6 +124,7 @@ myKettle.on("statusMessage",function(status){
     client.publish(`iKettle/${uniqueKettleID}/status`,JSON.stringify(status));
     client.publish(`iKettle/${uniqueKettleID}/temperature`, `${status.temperature}`);
     client.publish(`iKettle/${uniqueKettleID}/onBase`, status.onBase ? "true":"false");
+    client.publish(`iKettle/${uniqueKettleID}/waterlevelLiters`, `${status.waterlevelLiters}`);	  
   }
 })
 
